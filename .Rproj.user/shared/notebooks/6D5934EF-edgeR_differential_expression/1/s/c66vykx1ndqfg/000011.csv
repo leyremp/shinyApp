@@ -1,2 +1,0 @@
-"0","cor_matrix = as.matrix(cor(datos$counts, method=""pearson""))"
-"0","pheatmap::pheatmap(cor_matrix)"

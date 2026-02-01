@@ -1,2 +1,0 @@
-"0","boxplot(log10(as.matrix(datos$counts)+1), ylab=expression('Log'[10]~'Read counts'), las=2,"
-"0","        main=""Raw data"")"

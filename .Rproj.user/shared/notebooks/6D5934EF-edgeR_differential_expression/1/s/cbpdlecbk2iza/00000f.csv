@@ -1,8 +1,0 @@
-"0","hc = hclust(dist(1-cor(norm.vals, method=""pearson"")), method=""complete"") # Clusters columns by Spearman correlation."
-"0",""
-"0","sampleTree = as.dendrogram(hc, method=""average"")"
-"0",""
-"0","plot(sampleTree,"
-"0","     main = ""Sample Clustering"","
-"0","     ylab = ""Height"")"
-"0",""

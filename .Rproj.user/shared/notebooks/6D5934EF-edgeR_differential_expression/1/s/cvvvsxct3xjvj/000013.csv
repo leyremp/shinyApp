@@ -1,2 +1,0 @@
-"0","pca.res = PCAtools::pca(mat=datos$counts, metadata=datos$samples, scale=TRUE)"
-"0","PCAtools::screeplot(pca.res)"

@@ -1,7 +1,0 @@
-"0","tmmScaleFactors = datos$samples$lib.size * datos$samples$norm.factors #  normalized absolute expression from their scaling factors"
-"0",""
-"0","# normalize by TMM"
-"0","norm.vals = t(t(datos$counts)/tmmScaleFactors) * mean(tmmScaleFactors)"
-"0",""
-"0","# Compute logarithm"
-"0","norm.vals = log(norm.vals+1)"
