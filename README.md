@@ -46,6 +46,10 @@ required_p <- c("shiny", "shinydashboard", "shinyWidgets", "shinycssloaders",
 
 installed_p <- rownames(installed.packages())
 to_install <- setdiff(required_p, istalled_p)
+
+if (lenghth(to_install) > 0) {
+  install.packages(to_install)
+} 
 ```
 
 ### Iniciar la aplicación
@@ -79,3 +83,15 @@ Con los datos cargados, se puede proceder con el resto del pipeline.
 
 - El tiempo de análisis puede variar en función del tamaño del conjunto de los datos.
 
+## Estructura del proyecto
+
+```text
+├─── app.R
+├─── global.R
+├─── .gitignore
+├─── README.md
+├─── data/          #datos de ejemplo (conteos y metadatos)
+├─── functions/     #funciones auxiliares del pipeline
+└─── modules/       #módulos shiny de la app
+
+```
