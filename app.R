@@ -23,21 +23,28 @@ ui <- dashboardPage(
     
     tags$div(
       class = "sidebar-footer",
-      style = "padding: 10px 15px; font-size: 12px; color: #b8c7ce",
+      style = "padding: 10px 15px; font-size: 14px; color: #b8c7ce",
       tags$small(
         tags$div(
           tags$strong(a_title),
           paste0(" v ", version)
         ),
+        
+        tags$div(
+          tags$a(
+            href = github,
+            icon("github"),
+            "RSeqXplorer",
+            target = "_blank"
+          )
+        ),
+        
         tags$em(
           tags$div(
             "Desarrollado por:", tags$strong(dev)
           ),
           tags$div(
             paste0(subj, " © ", year)
-          ),
-          tags$div(
-            paste0("GitHub: ", github) #cambiar a link cuando se tenga
           )
         )
       )
@@ -69,7 +76,7 @@ ui <- dashboardPage(
             width = 6,
             status = "info",
             solidHeader = F,
-            title = tagList(icon("info-circle"), "¿Para qué sirve RNA-Seq Pipeline?"),
+            title = tagList(icon("info-circle"), "¿Para qué sirve RSeqXplorer?"),
             p("Esta aplicación realiza un análisis completo de datos de RNA-seq."),
             p("Desde la carga de datos hasta el enriquecimiento funcional de los genes
             diferencialmente expresados."),

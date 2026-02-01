@@ -61,11 +61,9 @@ o
 shiny::runApp("app.R")
 ```
 
----
-
 ## Ejemplo
 
-En la carpeta [data](https://github.com/leyremp/shinyApp/tree/main/data) se adjuntan dos ficheros de ejemplo, uno de conteos (ex_counts.txt) y otro de metadatos (ex_metadata.txt) con los que se puede desarrollar el pipeline al completo. 
+En la carpeta [data](https://github.com/leyremp/RSeqXplorer/tree/main/data) se adjuntan dos ficheros de ejemplo, uno de conteos (ex_counts.txt) y otro de metadatos (ex_metadata.txt) con los que se puede desarrollar el pipeline al completo. 
 
 En la sección de **Carga de datos** hay que especificar los separadores para cada fichero, para conteos `Tabulador` y para los metadatos `Punto y coma`. Para comprobar si se han cargado correctamente, las dos tablas se pueden visualizar junto con un mensaje de comprobación, que si aparece en verde indica que están correctamente cargados, pero en caso contrario, el mensaje aparece en rojo con el error detectado. 
 

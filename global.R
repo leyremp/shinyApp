@@ -32,9 +32,9 @@ source("modules/m_deg.R")
 source("modules/m_enrichment.R")
 
 #metadatos app
-a_title <- "RNA-Seq Pipeline" #no definitivo
+a_title <- "RSeqXplorer" #no definitivo
 version <- "1.0"
 dev <- "Leyre Melià"
 subj <- "Estudios in silico en biomedicina"
-github <- "GitHub" #link cuando se tenga
+github <- "https://github.com/leyremp/RSeqXplorer"
 year <- format(Sys.Date(), "%Y")
