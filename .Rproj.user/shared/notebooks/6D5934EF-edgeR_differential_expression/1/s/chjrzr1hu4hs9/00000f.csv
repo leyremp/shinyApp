@@ -1,0 +1,5 @@
+"0","# Model matrix design"
+"0","design = model.matrix(~datos$samples$group)"
+"0",""
+"0","# Estimate dispersions"
+"0","datos = estimateDisp(datos, design = design)"
