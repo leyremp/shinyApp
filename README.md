@@ -22,7 +22,7 @@ El pipeline de análisis incluye los siguientes pasos:
     - Selección del grupo tratamiento
     - Selección de los parámetros del análisis
     - Modelado por GLM 
-    - Visualización de los genes significativos (tabla y volcano plot)
+    - Visualización de los genes significativos mediante tablas y volcano plots
 
 4. **Análisis de enriquecimiento funcional con `clusterProfiler`**
     - Selección de parámetros para el análisis
@@ -45,7 +45,7 @@ required_p <- c("shiny", "shinydashboard", "shinyWidgets", "shinycssloaders",
                 "org.Hs.eg.db", "org.Mm.eg.db", "enrichplot", "stats")
 
 installed_p <- rownames(installed.packages())
-to_install <- setdiff(required_p, istalled_p)
+to_install <- setdiff(required_p, installed_p)
 
 if (lenghth(to_install) > 0) {
   install.packages(to_install)
@@ -67,11 +67,11 @@ shiny::runApp("app.R")
 
 ## Ejemplo
 
-En la carpeta [data](https://github.com/leyremp/RSeqXplorer/tree/main/data) se adjuntan dos ficheros de ejemplo, uno de conteos (ex_counts.txt) y otro de metadatos (ex_metadata.txt) con los que se puede desarrollar el pipeline al completo. 
+En la carpeta [data](https://github.com/leyremp/RSeqXplorer/tree/main/data) se adjuntan dos ficheros de ejemplo de *Homo sapiens*, uno de conteos (*ex_counts.txt*) y otro de metadatos (*ex_metadata.txt*) con los que se puede desarrollar el pipeline al completo. 
 
 En la sección de **Carga de datos** hay que especificar los separadores para cada fichero, para conteos `Tabulador` y para los metadatos `Punto y coma`. Para comprobar si se han cargado correctamente, las dos tablas se pueden visualizar junto con un mensaje de comprobación, que si aparece en verde indica que están correctamente cargados, pero en caso contrario, el mensaje aparece en rojo con el error detectado. 
 
-Con los datos cargados, se puede proceder con el resto del pipeline.
+Con los datos cargados, se puede proceder con el resto del pipeline. Originalmente están pensados para visualizar diferencias significativas dentro de la variable *Time*, por lo que en la sección **Control de calidad** se escogería ésta como la variable diseño y, por ejemplo T0 como el grupo control. Un último factor a tener en cuenta es el tipo de identificador de los genes, en este caso ENSEMBL (ej. ENSG00000120875).
 
 ---
 
@@ -79,7 +79,7 @@ Con los datos cargados, se puede proceder con el resto del pipeline.
 
 - Los datos de entrada deben estar correctamente formateados para evitar errores durante el análisis.
 
-- En la sección **Expresión diferencial** se debe seleccionar correctamente el tipo de identificador de los genes (ENSEMBL, SYMBOL, ENTREZ) para poder realizar el enriquecimiento funcional.
+- En la sección **Expresión diferencial** se debe seleccionar correctamente el tipo de identificador de los genes (ENSEMBL, SYMBOL, ENTREZ) para poder realizar el enriquecimiento funcional, ya que un missmatch podría generar errores en este último.
 
 - El tiempo de análisis puede variar en función del tamaño del conjunto de los datos.
 

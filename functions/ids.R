@@ -1,6 +1,6 @@
 #Funciones para tratar los ids (conversiones entre ENSEMBL, SYMBOL y ENTREZID)
 
-#1. Convertir (DEG)
+#1. Convertir IDs
 convertIDs <- function(gene_ids, 
                        ori_id, 
                        new_id = "ENTREZID", #por defecto
@@ -44,10 +44,11 @@ convertIDs <- function(gene_ids,
   return(ids)
 }
 
-#2. Detectar ids (enrichment)
+#2. Detectar IDs
 detectIDs <- function(gene_ids,
                       specie = "human") {
-  #detectar patron ensembl para humano o ratón
+  
+  #detectar patrón ensembl para humano o ratón
   ensembl <- if (specie == "human") {
     "^ENSG\\d{11}"
   } else {
